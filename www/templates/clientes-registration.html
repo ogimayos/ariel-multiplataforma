@@ -1,0 +1,33 @@
+<ion-view view-title="Add Listing" >
+  <ion-content>
+    <div class="list list-inset">
+      <label class="item item-input ">
+        <span class="input-label">Name:</span>
+        <input type="text" ng-model="cliente.name">
+      </label>
+      <label class="item item-input">
+        <span class="input-label" >direccion:</span>
+        <input type="number" ng-model="cliente.reknown">
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Description:</span>
+        <textarea rows="4" ng-model="cliente.bio"></textarea>
+      </label>
+      <label class="item item-input">
+          <button class="button button-icon icon ion-camera" ng-click="takePicture()"> Select picture </button>
+      </label>
+      <img src="data:image/jpg;base64,{{cliente.photo}}" style="max-width: 100%;" ng-if="(cliente.photo != '')">
+      <div class="item">
+        <b>Lat: </b> {{cliente.lat}}
+        <br>
+        <b>Long: </b> {{cliente.long}}
+      </div>
+      <button class="button button-block button-positive" ng-click="uploadProduct(cliente)">
+        Subir!
+      </button>
+    </div>
+
+    <div id="map" class="map" data-tap-disabled="true"></div>
+
+  </ion-content>
+</ion-view>

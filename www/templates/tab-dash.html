@@ -1,0 +1,56 @@
+<!--<ion-view view-title="Dashboard">
+  <ion-content class="padding">
+    <div class="list card">
+      <div class="item item-divider">Recent Updates</div>
+      <div class="item item-body">
+        <div>
+          There is a fire in <b>sector 3</b>
+        </div>
+      </div>
+    </div>
+    <div class="list card">
+      <div class="item item-divider">Health</div>
+      <div class="item item-body">
+        <div>
+          You ate an apple today!
+        </div>
+      </div>
+    </div>
+    <div class="list card">
+      <div class="item item-divider">Upcoming</div>
+      <div class="item item-body">
+        <div>
+          You have <b>29</b> meetings on your calendar tomorrow.
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>-->
+<ion-view view-title="MENU-SAETA-VENTAS" name="dashboard-view">
+<ion-nav-bar class="bar-stable">
+  <ion-nav-buttons side="right">
+    <button class="button icon-left ion-log-out button-stable" ng-click="logout()">Logout</button>
+  </ion-nav-buttons>
+ </ion-nav-bar>
+  <ion-content class="padding">
+    <div class="row"><div class="col text-center">
+      <h3 class="title">Bienvenido {{username}}!</h3>
+      SAETA-VENTAS-MOVILES
+      <br><br><br>
+      <button class="button button-full button-positive" ng-click="performValidRequest()" >
+        CLIENTES
+      </button>
+      <button class="button button-full button-energized" ng-click="performUnauthorizedRequest()">
+        ITEMS
+      </button>
+      <button class="button button-full button-assertive" ng-click="performInvalidRequest()">
+        VENTAS
+      </button>
+      <a class="item button button-clear button-positive" ui-sref="main.signup"> <small> if not registered sign up</small></a>
+    <a class="item button button-clear button-positive" ui-sref="signup"> <small> 2if not registered sign up</small></a>
+      <br><br>
+      {{response}}
+    </div></div>
+  </ion-content>
+</ion-view>
+

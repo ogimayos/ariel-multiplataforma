@@ -1,0 +1,81 @@
+
+<!--<ion-view view-title="Cliente" ng-init="loadMap">
+  <ion-content>
+
+    <div class="list card">
+<ion-item ng-repeat="item in artists | filter:  query" class="item-thumbnail-left item-text-wrap" href="#/tab/clientes/{{item.id}}">
+      <div class="item item-avatar">
+        <img src="data:image/png;base64,{{item.image}}">
+        <h2>{{item.name}}</h2>
+        <p>{{item.bio}}</p>
+      </div>
+      <div class="item item-center">-->
+        
+        <!--<img class="medium-image" src="data:image/jpg;base64,{{item.image}}">-->
+<!--
+        <img src="data:image/jpg;base64,{{item.image}}" style="max-width: 50%;" ng-if="(item.image != '')">
+      </div>
+      
+</ion-item>
+    </div>
+
+    <div id="map1" class="map" data-tap-disabled="true"></div>
+  </ion-content>
+  </ion-pane>
+</ion-view>
+-->
+
+
+
+
+
+<ion-view view-title="Cliente" ng-init="loadMap">
+<ion-content>
+
+<div class="list card">
+<ion-item ng-repeat="item in clientes">
+  <div class="item item-avatar">
+    <img src="data:image/png;base64,{{item.image}}">
+    <h2>{{item.name}}</h2>
+    <p>{{item.reknown}}</p>
+  </div>
+
+  <div class="item item-body">
+    <img class="full-image" src="data:image/png;base64,{{item.image}}" style="max-width: 100%;" ng-if="(item.image != '')">
+    <p>
+      {{item.bio}}
+    </p>
+    <!--<p>
+      <a href="#" class="subdued">1 Like</a>
+      <a href="#" class="subdued">5 Comments</a>
+    </p>-->
+  </div>
+
+  <!--<div class="item tabs tabs-secondary tabs-icon-left">
+    <a class="tab-item" href="#">
+      <i class="icon ion-thumbsup"></i>
+      Like
+    </a>
+    <a class="tab-item" href="#">
+      <i class="icon ion-chatbox"></i>
+      Comment
+    </a>
+    <a class="tab-item" href="#">
+      <i class="icon ion-share"></i>
+      Share
+    </a>
+  </div>-->
+
+</div>
+<div id="map2" class="map" data-tap-disabled="true"></div>
+</ion-content>
+</ion-view>
+
+<!--
+
+ <ion-view view-title="Account" ng-init="loadMap">
+  <ion-content>
+    <div id="map2" class="map" data-tap-disabled="true"></div>
+  </ion-content>
+</ion-view>
+-->

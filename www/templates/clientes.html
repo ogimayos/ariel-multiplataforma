@@ -1,0 +1,54 @@
+<ion-view view-title="CLIENTES" name="tab-clientes">
+
+     <ion-header-bar class="bar-dark" align-title="center">
+     <button
+      class="button button-icon ion-minus-circled" ng-click="data.showDelete = !data.showDelete; data.showReorder = false;">
+      </button>
+<h2 class="title">CLIENTES</h2>
+      <button 
+      class="button button-icon ion-navicon" ng-click="data.showReorder = !data.showReorder; data.showDelete= false;">
+      </button>
+     
+      <a class="button button-clear button-positive" href="#/tab/clientes-registration">
+      <i class="ion-plus-circled"></i>
+      Publicar
+    </a>
+   </ion-header-bar>
+   
+   <div class="bar bar-subheader item-input-inset bar-light">
+     <label class="item-input-wrapper">
+       <i class="icon ion-search placeholder-icon"></i>
+       <input type="search" ng-model="query" placeholder="Search">
+     </label>
+   </div>
+   <ion-content  class="has-subheader">
+      <ion-list show-delete="data.showDelete" show-reorder="data.showReorder">
+      <ion-item ng-repeat="item in artists | filter:  query" class="item-thumbnail-left item-text-wrap" href="#/tab/clientes/{{item.id}}">
+        <img src="data:image/png;base64,{{item.image}}" alt="{{item.name}}">
+        <!--<img src="http://localhost:9090/webservice/showimage.php?image/png;base64,{{item.image}}" alt="{{item.name}}">-->
+        <h2>{{item.name}}</h2>
+        <h3>{{item.reknown}}</h3>
+        <p>{{item.bio | limitTo: 150}}
+          {{item.bio.length > 50 ? '&hellip;' : ''}}</p>
+          <ion-delete-button ng-click="onItemDelete(item)" class="ion-minus-circled"></ion-delete-button>
+          <ion-reorder-button class="ion-navicon" on-reorder="moveItem(item, $fromIndex, $toIndex)"
+        </ion-reorder-button>
+      </ion-item>
+      </ion-list>
+ </ion-content>
+
+    <div class="tabs tabs-icon-left tabs-color-active-positive">
+  <a class="tab-item" href="#/tab/dash">
+    <i class="icon ion-home"></i>
+    Home
+  </a>
+  <a class="tab-item">
+    <i class="icon ion-document-text"></i>
+    Reportes
+  </a>
+  <a class="tab-item">
+    <i class="icon ion-gear-a"></i>
+    Settings
+  </a>
+</div>
+  </ion-view>
